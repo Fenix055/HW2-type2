@@ -19,7 +19,7 @@ public class Main {
 
     public static void paymentUp(String name,int curPay) {
         int up=curPay/10;
-        System.out.println(name + " теперь получает " + (curPay+up) + " рублей. Годовой доход вырос на " + up + " рублей");
+        System.out.println(name + " теперь получает " + (curPay+up) + " рублей. Годовой доход вырос на " + (up*12) + " рублей");
     }
 
     public static void main(String[] args) {
@@ -49,14 +49,23 @@ public class Main {
         byte x7 = 67;
 
         ///  Task 3
-        System.out.println("На каждого ученика рассчитано " + (480/(23+27+30)) + " листов бумаги");
+        short paper = 480;
+        byte teacher1 = 23;
+        byte teacher2 = 27;
+        byte teacher3 = 30;
+        System.out.println("На каждого ученика рассчитано " + (paper/(teacher1+teacher2+teacher3)) + " листов бумаги");
         System.out.println();
 
         /// Task 4
         machineWork(20, (24*60), (3*24*60), (30*24*60));
 
         /// Task 5
-        System.out.println("В школе, где " + 120/6 + " классов, нужно " + 120/3 + " банок белой краски и " + 120/3*2 + " банок коричневой краски");
+        byte paint = 120;
+        byte whitePerClass = 2;
+        byte brownPerClass = 4;
+        System.out.println("В школе, где " + paint/(whitePerClass+brownPerClass) +
+                " классов, нужно " + paint/(whitePerClass+brownPerClass)*whitePerClass + " банок белой краски и "
+                + paint/(whitePerClass+brownPerClass)*brownPerClass + " банок коричневой краски");
         System.out.println();
 
         /// Task 6
